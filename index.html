@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Badhri V. — Resume</title>
+
+  <style>
+    :root{
+      --bg:#f5f7fb;
+      --card:#ffffff;
+      --accent:#0b74de;
+      --muted:#55606a;
+      --heading:#0b1220;
+      --maxwidth:880px;
+      --pad:20px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#eef2f7 300px);
+      color:var(--heading);
+      display:flex;
+      justify-content:center;
+      padding:30px;
+    }
+
+    .sheet{
+      width:100%;
+      max-width:var(--maxwidth);
+      background:var(--card);
+      border-radius:10px;
+      box-shadow:0 12px 30px rgba(12,18,30,0.06);
+      overflow:hidden;
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      padding:var(--pad);
+      border-bottom:1px solid #eef1f6;
+      align-items:center;
+    }
+    .left h1{
+      margin:0;
+      font-size:28px;
+      letter-spacing:0.2px;
+    }
+    .left p.role{
+      margin:6px 0 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .right{
+      text-align:right;
+      font-size:14px;
+      color:var(--muted);
+    }
+    .right a{color:var(--accent);text-decoration:none}
+
+    main{padding:var(--pad)}
+    h2{
+      margin:0 0 10px;
+      font-size:13px;
+      color:var(--accent);
+      text-transform:uppercase;
+      letter-spacing:0.8px;
+    }
+
+    section{margin-bottom:18px}
+    .summary p{margin:0;color:var(--muted);line-height:1.45}
+    .two-col{display:flex;gap:20px;align-items:flex-start}
+    .col{flex:1}
+    .job{
+      margin-bottom:12px;
+    }
+    .job .title{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      align-items:flex-start;
+    }
+    .job h3{margin:0;font-size:15px}
+    .job .date{color:var(--muted);font-size:13px}
+    ul{margin:8px 0 0 18px;color:var(--muted);line-height:1.45}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:#f1f6ff;padding:6px 10px;border-radius:999px;font-size:13px;color:var(--accent)}
+    .meta{font-size:13px;color:var(--muted)}
+    footer{
+      padding:12px var(--pad);
+      border-top:1px solid #eef1f6;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* Print-friendly tweaks */
+    @media print{
+      body{background:white;padding:0}
+      .sheet{box-shadow:none;border-radius:0}
+      header .right {text-align:left}
+      footer{display:none}
+    }
+
+    /* Responsive */
+    @media (max-width:720px){
+      header{flex-direction:column;align-items:flex-start}
+      .right{text-align:left}
+      .two-col{flex-direction:column}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sheet" role="document">
+    <header>
+      <div class="left">
+        <h1>Badhri V.</h1>
+        <p class="role">Data Analyst • App Developer • Product Management</p>
+      </div>
+
+      <div class="right" aria-label="Contact information">
+        <div><strong>Email:</strong> you@example.com</div>
+        <div><strong>Phone:</strong> +91 9XXXXXXXXX</div>
+        <div><strong>Location:</strong> Chennai, India</div>
+        <div><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a></div>
+        <div><strong>GitHub:</strong> <a href="#" target="_blank" rel="noopener">github.com/yourusername</a></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="summary" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Professional Summary</h2>
+        <p>
+          Data-focused analyst and full-stack hobbyist with practical experience in SQL, Power BI and MySQL. 
+          Experienced in building dashboards, connecting Power BI to SQL Server, implementing dynamic row-level security,
+          and deploying static web apps. Strong communicator who turns data into clear business recommendations.
+        </p>
+      </section>
+
+      <section class="experience" aria-labelledby="exp-heading">
+        <h2 id="exp-heading">Experience</h2>
+
+        <div class="job" aria-label="Most recent job">
+          <div class="title">
+            <h3>Data Analyst Intern — Company (Internship)</h3>
+            <div class="date">Jun 2025 — Aug 2025</div>
+          </div>
+          <ul>
+            <li>Built retail performance dashboards in Power BI (Retail, Store, Product, Target dashboards) and implemented star-schema modeling.</li>
+            <li>Connected Power BI to SQL Server, implemented dynamic RLS and incremental refresh for large datasets.</li>
+            <li>Prepared insights and recommendations; reduced manual reporting time by automating key metrics and visualizations.</li>
+          </ul>
+        </div>
+
+        <div class="job" aria-label="App developer work">
+          <div class="title">
+            <h3>App Developer — Personal Projects</h3>
+            <div class="date">2023 — Present</div>
+          </div>
+          <ul>
+            <li>Developed static resume and photo-carousel sites (HTML/CSS/JS) and deployed to Azure Static Web Apps via GitHub integration.</li>
+            <li>Built an on-road assistance prototype using React and Firebase (Auth + Firestore session tracking).</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="education" aria-labelledby="edu-heading">
+        <h2 id="edu-heading">Education</h2>
+        <div class="job">
+          <div class="title">
+            <h3>PGDM — Data Science & Business Analytics, ISBR</h3>
+            <div class="date">2024 — Present</div>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="title">
+            <h3>BE — Computer Science</h3>
+            <div class="date">2018 — 2022</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+        <div class="skills" role="list">
+          <span class="skill" role="listitem">SQL</span>
+          <span class="skill" role="listitem">Power BI</span>
+          <span class="skill" role="listitem">MySQL</span>
+          <span class="skill" role="listitem">Excel</span>
+          <span class="skill" role="listitem">HTML / CSS / JS</span>
+          <span class="skill" role="listitem">Git & GitHub</span>
+          <span class="skill" role="listitem">Firebase</span>
+          <span class="skill" role="listitem">Product Management</span>
+        </div>
+      </section>
+
+      <section class="projects" aria-labelledby="proj-heading">
+        <h2 id="proj-heading">Selected Projects</h2>
+        <ul>
+          <li><strong>Retail Dashboard (Power BI):</strong> 4-dashboard solution with KPI definitions, actionable insights, and recommendations for merchandising and store performance.</li>
+          <li><strong>Photo Carousel & Resume Site:</strong> Responsive static sites (HTML/CSS/JS) deployed using Azure Static Web Apps and GitHub Actions.</li>
+          <li><strong>On-road Assistance Prototype:</strong> React + Firebase prototype with login, session logging and daily activity upload tracking for interns.</li>
+        </ul>
+      </section>
+
+      <section class="certifications" aria-labelledby="certs-heading">
+        <h2 id="certs-heading">Certifications & Achievements</h2>
+        <ul>
+          <li>Trinity Certificate — Drums</li>
+          <li>SLX — Sustainable Supporter (recognition certificate)</li>
+          <li>Yoga Championship — Winner</li>
+        </ul>
+      </section>
+
+      <section class="additional" aria-labelledby="add-heading">
+        <h2 id="add-heading">Additional</h2>
+        <p class="meta">Languages: English, Tamil. Available for internships and entry-level roles. Dream company: Capgemini.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div>Last updated: Oct 30, 2025</div>
+      <div class="meta">Print-friendly • A4-ready</div>
+    </footer>
+  </div>
+</body>
+</html>
